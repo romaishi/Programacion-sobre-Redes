@@ -25,6 +25,7 @@ public class Main {
 		
 		
 		try {
+			/*
 			int linea ;
 			String palabra="";
 			while( (linea = System.in.read()) != 13)
@@ -43,13 +44,14 @@ public class Main {
 			
 			InputStreamReader isr = new InputStreamReader(System.in);
 			BufferedReader br = new BufferedReader(isr);
-			
+			/*
 			int linea2 ;
 			String palabra2 ="";
 			while( (linea2 = System.in.read()) != 13)
 			{
 				palabra2 = palabra2 + (char)linea2;
 			}
+			*/
 			ps.printf("Con readline:%s \n", br.readLine());//lee toda la linea
 			
 			
