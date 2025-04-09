@@ -1,7 +1,18 @@
 package CadenaCaracteres;
 
-public class Main {
+import java.io.PrintStream;
+import java.util.StringTokenizer;
 
+public class Main {
+	public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_MAGENTA = "\u0033[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_RESET = "\u001B[0m";
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -27,9 +38,36 @@ public class Main {
 		
 		palabra.toCharArray(); //Convierte un string en un vector
 		// ['L', 'i', 'n', 'K', 'e', 'v', 'i', 'n']
-		palabra.split("K");
+		palabra.split("K");// vec[] => {"Lin", "evin"} Lin evin
 		palabra.substring(2,4); // LinKevin -> nKev
 		
+		
+		//Tokenizer
+		// String = 75+9+63=10
+		StringTokenizer st = new StringTokenizer("75+9+63=10", "\\+"); //Primer / indica que lo sigue va a ser un caracter de escape, y dps viene el caracter de escape, en este caso seria el '\+'
+		PrintStream ps = new PrintStream(System.out);
+		
+		ps.println(ANSI_GREEN.concat(String.valueOf(st.countTokens()).concat(ANSI_RESET)));// Cant. de tokens
+		
+		while(st.hasMoreTokens())
+		{
+			ps.println(st.nextToken());  // El texto en si como String			
+		}
+		
+		/*
+		ps.println(st.nextToken());  // El texto en si como String
+		ps.println(st.nextToken());  // El texto en si como String
+		ps.println(st.nextToken());  // El texto en si como String
+		ps.println(st.nextElement());// Objeto representado con String
+		
+		
+		ps.println(st.nextElement());
+		*/
+		int num = Integer.parseInt("9");
+		
+		
 	}
+
+
 
 }
