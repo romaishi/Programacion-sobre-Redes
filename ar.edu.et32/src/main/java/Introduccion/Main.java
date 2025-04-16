@@ -40,7 +40,7 @@ public class Main {
 			* %b Boolean 
 			*/
 			
-			ps.printf("La variable palabra: %s \n", palabra);
+			ps.printf("La variable palabra: %s \n", "lalala");
 			
 			InputStreamReader isr = new InputStreamReader(System.in);
 			BufferedReader br = new BufferedReader(isr);
