@@ -13,6 +13,9 @@ public class main {
 		
 		arch.LeerFileConBuffer(arch.getFiles());
 		
+		
+		arch.modificarArchivoTemporalLinea(arch.getFiles(), "hola", "chau");
+		
 	}
 
 }
